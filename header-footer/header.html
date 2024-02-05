@@ -1,0 +1,90 @@
+<div class="container-fluid">
+
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container-fluid">
+            <div class="icons d-flex align-items-center gap-3">
+
+                <a class data-bs-toggle="offcanvas" href="#header_nav"
+                    role="button" aria-controls="offcanvasExample">
+                    <span class="navbar-toggler-icon"></span>
+                </a>
+                <div class="login mobile">
+                    <a class data-bs-toggle="offcanvas"
+                        href="#search"
+                        role="button" aria-controls="offcanvasExample">
+                        <span class="fa fa-magnifying-glass"></span></a>
+                </div>
+            </div>
+            <a class="navbar-brand" href="#">
+                <img
+                    src="../assets/Images/logo/PerfumeHub-logos_transparent.png"
+                    alt class="img-fluid">
+            </a>
+            <div class="icons d-flex align-items-center gap-3">
+                <div class="login">
+                    <a class data-bs-toggle="offcanvas"
+                        href="#search"
+                        role="button" aria-controls="offcanvasExample">
+                        <span class="fa fa-magnifying-glass"></span></a>
+                </div>
+                <div class="social"><a href><span
+                            class="fa fa-user"></span></a></div>
+                <div class="social"><a href><span
+                            class="fa fa-shopping-cart"></span></a></div>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="header_nav"
+    aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <button type="button" class="btn-close text-reset"
+            data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body position-relative">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-md-column">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Perfume Spray</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Body Spray</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Bakhoor</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Incense Sticks</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">New Arrival</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Diffuser Oil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Track Order</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Return Your Order</a>
+            </li>
+        </ul>
+        <div class="login_link position-absolute bottom-0 card start-0 end-0 p-2">
+            <a href="#" class="text-decoration-none"><span class="fa fa-user"></span>&nbsp; Login</a>
+        </div>
+    </div>
+</div>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="search"
+    aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <button type="button" class="btn-close text-reset"
+            data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <form action="search">
+            <div class="form-group">
+                <input type="text" name="search" id="search"
+                    class="form-control" placeholder="Search Here...">
+            </div>
+        </form>
+    </div>
+</div>
