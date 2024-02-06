@@ -2,6 +2,10 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 #header .navbar-brand {
   max-width: 300px;
   max-height: 200px;
@@ -89,4 +93,56 @@
   text-align: center;
   width: 100%;
   font-size: 20px;
+}
+
+.product .product-images {
+  position: relative;
+}
+.product .product-images .image-hover {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.product .product-images:hover .image-hover {
+  display: block;
+  opacity: 1;
+}
+.product .product-name {
+  text-align: center;
+  padding: 5px 0;
+}
+.product .product-name a {
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+}
+.product .rating {
+  justify-content: center;
+  padding: 5px 0;
+}
+.product .rating .star .fill {
+  color: #F2B01E;
+}
+.product .price {
+  justify-content: center;
+  padding: 5px 0;
+}
+.product .price .selling-price {
+  color: #956827;
+  font-weight: 600;
+  font-size: 18px;
+}
+.product .price .original-price {
+  color: gray;
+}
+.product .add-to-cart {
+  padding: 5px 0;
+}
+.product .add-to-cart a {
+  color: black;
+}
+
+.premium-attar-product .slick-slide {
+  padding: 0 10px;
 }/*# sourceMappingURL=style.css.map */

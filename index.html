@@ -8,8 +8,9 @@
         <link rel="stylesheet" href="./assets/css/style.css">
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
 
-    </head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"></head>
     <body>
         <section id="header" class="bg-light"></section>
         <section id="banner" class="mt-3">
@@ -86,11 +87,144 @@
             </div>
         </div>
         </section>
+        <section id="exploretherange">
+            <div class="container-fluid">
+                <a href="#">
+                    <img src="./assets/Images/banner/show_more_product.png" alt="" class="img-fluid">
+                </a>
+            </div>
+        </section>
+        <section class="premiusAttar">
+            <div class="container">
+                <div class="heading">
+                    <h1>Premium Attar (Roll-on Perfume)</h1>
+                    <p class="sub-heading">
+                        Explore our premium range of Non Alcoholic Attars
+                    </p>
+                </div>
+                 <div class="premium-attar-product"></div>
+            </div>
+        </section>
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+            <script src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
         <script>
         $('#header').load('./header-footer/header.html');
+
+        let products = [
+            {
+                product_name : 'Shanaya Luxury Attar Perfume',
+                image : {
+                    normal: './product-images/aaShanaya12ml.2.jpg',
+                    hover: './product-images/aaShanaya12ml.2_hover.jpg'
+                },
+                rating: 4,
+                peapleRate:9451,
+                price:899,
+                discountPer:45,
+                bestSeller:true,            
+            },
+            {
+                product_name : 'Assorted Luxury Attar Perfume Gift Set (6 × 5.5Ml)',
+                image : {
+                    normal: './product-images/assortedLuxuryAttar-hover.jpg',
+                    hover: './product-images/assortedLuxuryAttar.jpg'
+                },
+                rating: 4,
+                peapleRate:2999,
+                price:899,
+                discountPer:45,
+                bestSeller:true,            
+            },
+            {
+                product_name : 'Oudh Al Hashmi Luxury Attar Perfume',
+                image : {
+                    normal: './product-images/OudhAlHashmi12ml.jpg',
+                    hover: './product-images/OudhAlHashmi12ml-hover.jpg'
+                },
+                rating: 5,
+                peapleRate:288,
+                price:1142,
+                discountPer:30,
+                bestSeller:true,            
+            },
+            {
+                product_name : 'Taabish Luxury Attar Perfume',
+                image : {
+                    normal: './product-images/Taabish12ml.jpg',
+                    hover: './product-images/Taabish12ml-hover.jpg'
+                },
+                rating: 5,
+                peapleRate:1576,
+                price:1140,
+                discountPer:30,
+                bestSeller:true,            
+            },
+            {
+                product_name : 'Taabish Luxury Attar Perfume',
+                image : {
+                    normal: './product-images/Taabish12ml.jpg',
+                    hover: './product-images/Taabish12ml-hover.jpg'
+                },
+                rating: 5,
+                peapleRate:1576,
+                price:1140,
+                discountPer:30,
+                bestSeller:true,            
+            }
+        ];   
+        for (const product of products) {
+            let ratings = product?.rating;
+            let rating_print = '';
+            for (let index = 1; index <= 5; index++) {
+                if(index <= ratings){
+                    rating_print += '<span class="fa fa-star fill"></span>'; 
+                }else{
+                    rating_print += '<span class="fa fa-star"></span>'; 
+                }
+            }
+            let productHtml = `
+                <div>
+                    <div class="product">
+                        <div class="product-images">
+                            <div class="image">
+                                <img src="${product?.image?.normal}" alt="" class="img-fluid">
+                            </div>
+                            <div class="image-hover">
+                                <img src="${product?.image?.hover}" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <a href="">${product?.product_name}</a>
+                        </div>
+                        <div class="rating d-flex gap-2">
+                            <div class="star">                                
+                                ${rating_print}
+                            </div>
+                            <span>(9,451)</span>
+                        </div>
+                        <div class="price d-flex gap-3">
+                            <div class="selling-price">
+                                &#8377; 599
+                            </div>
+                            <div class="original-price">
+                                <del>&#8377;899</del>
+                            </div>
+                        </div>
+                        <div class="add-to-cart">
+                            <button class="btn btn-dark btn-lg w-100">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>                 
+            `;
+            $('.premium-attar-product').append(productHtml);
+        }
+        
+        $('.premium-attar-product').slick({
+            slidesToShow:4,
+            slidesToScroll:4
+        });
     </script>
     </body>
 </html>
